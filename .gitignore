@@ -57,3 +57,5 @@ logs/
 # Cache
 .cache/
 .parcel-cache/
+
+scripts
