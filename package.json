@@ -1,0 +1,74 @@
+{
+  "name": "mu",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "main": "dist/index.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "keywords": [
+    "websocket",
+    "bun",
+    "framework",
+    "dependency-injection",
+    "decorator",
+    "typescript",
+    "realtime",
+    "mu"
+  ],
+  "scripts": {
+    "lint": "bunx lint"
+  },
+  "author": "0x0P",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/0x0p/mu"
+  },
+  "devDependencies": {
+    "@types/bun": "latest",
+    "typescript": "^5.5.0"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "engines": {
+    "bun": ">=1.0.0"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/types/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./app": {
+      "types": "./dist/types/mu/app/application.d.ts",
+      "import": "./dist/mu/app/application.js"
+    },
+    "./server": {
+      "types": "./dist/types/mu/server/server.d.ts",
+      "import": "./dist/mu/server/server.js"
+    },
+    "./di": {
+      "types": "./dist/types/mu/di/container.d.ts",
+      "import": "./dist/mu/di/container.js"
+    },
+    "./decorators": {
+      "types": "./dist/types/mu/decorators/index.d.ts",
+      "import": "./dist/mu/decorators/index.js"
+    },
+    "./metadata": {
+      "types": "./dist/types/mu/metadata/index.d.ts",
+      "import": "./dist/mu/metadata/index.js"
+    },
+    "./types": {
+      "types": "./dist/types/mu/types.d.ts",
+      "import": "./dist/mu/types.js"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "dependencies": {
+    "reflect-metadata": "^0.1.13"
+  }
+}
