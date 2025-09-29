@@ -1,5 +1,5 @@
 {
-  "name": "mu",
+  "name": "@torln/mu",
   "version": "1.0.0",
   "description": "",
   "type": "module",
@@ -10,14 +10,19 @@
     "websocket",
     "bun",
     "framework",
-    "dependency-injection",
-    "decorator",
     "typescript",
     "realtime",
     "mu"
   ],
   "scripts": {
-    "lint": "bunx lint"
+    "start": "bun dist/index.js",
+    "dev": "bun --hot example/main.ts",
+    "lint": "bunx lint",
+    "clean": "rm -rf dist",
+    "build:types": "tsc -p tsconfig.types.json",
+    "build:js": "bun build ./src/index.ts ./src/mu/app/application.ts ./src/mu/server/server.ts ./src/mu/di/container.ts ./src/mu/decorators/index.ts ./src/mu/metadata/index.ts ./src/mu/types.ts --outdir ./dist",
+    "build": "bun run clean && bun run build:js && bun run build:types",
+    "prepublishOnly": "bun run build"
   },
   "author": "0x0P",
   "license": "MIT",
@@ -69,6 +74,6 @@
     "dist"
   ],
   "dependencies": {
-    "reflect-metadata": "^0.1.13"
+    "reflect-metadata": "^0.2.2"
   }
 }
