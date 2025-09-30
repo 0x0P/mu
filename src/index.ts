@@ -42,7 +42,7 @@ export {
   setParamTypes,
 } from "./mu/metadata/index.ts";
 
-export const VERSION = "1.0.0";
+export const VERSION = "1.0.1";
 
 import type { muApplicationOptions as _muApplicationOptions } from "./mu/types.ts";
 import { muApplication as _muApplication } from "./mu/app/application.ts";
